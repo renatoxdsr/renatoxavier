@@ -17,19 +17,20 @@ function toggleAnimation(){
     //Clone the wrapper
     dark = !dark;
     let clone = big_wrapper.cloneNode(true);
-    let brand = document.querySelectorAll(".logo");
-    let url = "img/logo2w.png";
+    let brand = document.getElementsByClassName("logo");
+    
     
     if(dark) {
         clone.classList.remove("light");
         clone.classList.add("dark");
-        /* brand.remove('src', 'img/logo2w.png'); */
+        brand.src="img/logo2w.png";
         
     }
 
     else{
         clone.classList.remove("dark");
         clone.classList.add("light");
+        brand.src="img/logo2.png";
     }
     clone.classList.add("copy");
     main.appendChild(clone);
